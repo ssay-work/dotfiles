@@ -6,6 +6,7 @@
 
 - link:
     ~/.config/nvim: config/nvim
+    ~/.profile: profile
 
 - create:
     - ~/tmp
