@@ -1,0 +1,15 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.config/nvim: config/nvim
+
+- create:
+    - ~/tmp
+
+- shell:
+  - [./config/nvim/install_vim_plug.sh, Installing VimPlug]
+
