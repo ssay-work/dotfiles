@@ -8,6 +8,8 @@
     ~/.config/nvim: config/nvim
     ~/.profile: profile
     ~/.bashrc: bashrc
+    ~/.bash_aliases: bash_aliases
+    ~/.bash_env: bash_env
 
 - create:
     - ~/tmp

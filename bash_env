@@ -1,0 +1,5 @@
+# Do not make changes below this line.  Any machine specific changes should be made in the .local file
+if [ -f ~/.bash_env.local ]; then
+    . ~/.bash_env.local
+fi
+
