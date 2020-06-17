@@ -5,11 +5,18 @@
 - clean: ['~']
 
 - link:
-    ~/.config/nvim: config/nvim
-    ~/.profile: profile
-    ~/.bashrc: bashrc
+    ~/.config/nvim:
+      create: true
+      path: config/nvim
+    ~/.profile:
+      force: true
+      path: profile
+    ~/.bashrc:
+      force: true
+      path: bashrc
     ~/.bash_aliases: bash_aliases
     ~/.bash_env: bash_env
+    ~/.vimrc: vimrc
 
 - create:
     - ~/tmp
