@@ -61,7 +61,7 @@ parse_git_branch() {
 }
 
 if [ "$color_prompt" = yes ]; then
-    if type __git_ps1 | grep -q '^function$' 2>/dev/null; then
+    if type __git_ps1 | grep -q 'is a function' 2>/dev/null; then
         PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[0;31m\]$(__git_ps1)\[\033[00m\]\$ '
     else
         PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[0;31m\]$(parse_git_branch)\[\033[00m\]\$ '
