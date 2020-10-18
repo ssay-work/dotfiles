@@ -16,6 +16,7 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
         ssh-agent -s &> ~/.ssh/ssh-agent
    fi
    eval `cat ~/.ssh/ssh-agent`
+   ssh-add
 fi
 
 # If not running interactively, don't do anything

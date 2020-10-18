@@ -31,3 +31,5 @@ if [ -d "$HOME/squashfs-root/usr/bin" ] ; then
     PATH="$HOME/squashfs-root/usr/bin:$PATH"
 fi
 
+# setup git_completion if it exists
+test -f ~/.git_completion.bash && . $_
