@@ -6,6 +6,7 @@ nnoremap <leader>s :mksession<CR>
 " Tab settings {{{
 set tabstop=4                     " number of visual spaces per TAB
 set softtabstop=4                 " number of spaces in tab when editing
+set shiftwidth=4                  " number of spaces for displaying code indents
 set expandtab                     " tabs are spaces
 " }}}
 " UI Layout {{{
