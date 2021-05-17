@@ -92,12 +92,21 @@ colorscheme codedark
 let g:lightline = { 'colorscheme': 'codedark' }
 " }}}
 " {{{ VimWiki
-let g:vimwiki_list = [{'path': '$WIKI_LOC', 'auto_tags': 1}]
+"
+let wiki = {}
+let wiki.path = '$WIKI_LOC'
+let wiki.auto_tags = 1
+let wiki.syntax = 'markdown'
+let wiki.ext = '.md'
+let wiki.nested_syntaxes = {'py': 'python', 'c++': 'cpp', 'yaml': 'yaml', 'json': 'json', 'js': 'javascript'}
+let g:vimwiki_list = [wiki]
+let g:vimwiki_global_ext = 0 " Only files in the wiki.path are considered part of vimwiki
+let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 command! Diary VimwikiDiaryIndex
 augroup vimwikigroup
     autocmd!
     " automatically update links on read diary
-    autocmd BufRead,BufNewFile diary.wiki VimwikiDiaryGenerateLinks
+    autocmd BufRead,BufNewFile diary.md VimwikiDiaryGenerateLinks
 augroup end
 " }}}
 " {{{ nerdcommenter
