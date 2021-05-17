@@ -16,7 +16,6 @@
       path: bashrc
     ~/.bash_aliases: bash_aliases
     ~/.bash_env: bash_env
-    ~/.vimrc: vimrc
     ~/.git_completion.bash: git_completion.bash
 
 - create:
