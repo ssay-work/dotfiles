@@ -26,8 +26,10 @@ case $- in
 esac
 
 # Python
-PIPENV_VENV_IN_PROJECT=True
-
+VIRTUALENV_ALWAYS_COPY=1
+PIPENV_VENV_IN_PROJECT="enabled"
+PIPENV_IGNORE_VIRTUALENVS=1
+PIPENV_NO_INHERIT=True
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -146,3 +148,7 @@ if ! shopt -oq posix; then
     . $(brew --prefix)/etc/bash_completion
   fi
 fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
