@@ -15,7 +15,7 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
         # Launch a new instance of the agent
         ssh-agent -s &> ~/.ssh/ssh-agent
    fi
-   eval `cat ~/.ssh/ssh-agent`
+   eval `ssh-agent`
    ssh-add
 fi
 
@@ -24,6 +24,10 @@ case $- in
     *i*) ;;
       *) return;;
 esac
+
+# Python
+PIPENV_VENV_IN_PROJECT=True
+
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
